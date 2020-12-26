@@ -1,0 +1,22 @@
+ALGORITHM CheckPoint
+VAR
+ NC , NW , NV : INTEGER;
+ test : STRING;
+
+BEGIN
+    Write("TYPE IN THE SENTENCE");
+    Read(test);
+    FOR i FROM 0 to LENGTH OF test DO 
+IF (test[i]:=' ' ) THEN
+    NW:=NW + 1; 
+ELSE_IF (test[i] in [o,i,y,e,a,u]) THEN
+    NV:=NV+1;
+    NC:NC+1;
+ELSE
+    NC:NC+1;
+END_IF
+    END_FOR
+    Write(NC);
+    Write(NV);
+    Write(NW);
+END
